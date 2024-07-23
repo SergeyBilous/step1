@@ -1,1 +1,0 @@
-# First mongo example
