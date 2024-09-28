@@ -1,4 +1,4 @@
-import com.mongodb.client.MongoClient;
+package ru.home;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -14,6 +14,7 @@ public class Starter {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
         mongoTemplate= (MongoTemplate) context.getBean("mongoTemplate");
+        System.out.println("Connected.");
         System.exit(0);
     }
 }
